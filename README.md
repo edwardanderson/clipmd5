@@ -64,3 +64,7 @@ pip install tqdm colorama
 ## Future
 
 I really only have a single use case for this utility at the moment: ensuring that all streams are copied integrally when extracting a clip. Please do contribute your own use cases or suggestions for behaviour or improvement.
+
+
+## Licence
+[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/)
