@@ -42,13 +42,14 @@ The utility can be imported into other Python projects. The `clipmd5()` function
 ```python
 import clipmd5
 
-input = '/path/to/i.mkv'
+src = '/path/to/i.mkv'
+dst = 'output.mkv'
 in_ = '00:00:30'
 out = '00:00:45'
 additional_args = ['-an']
 
 
-fixity = clipmd5.clipmd5(input, in_, 'output.mkv', out, ffmpeg=additional_args)
+fixity = clipmd5.clipmd5(src, in_, dst, out, ffmpeg=additional_args)
 ```
 
 
