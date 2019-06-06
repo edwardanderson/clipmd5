@@ -2,7 +2,7 @@
 
 # Use:
 #    $ clipmd5 /path/to/source.mkv --start 00:01:15 --end 00:03:00 --output clip.mkv
-#    $ clipmd5 source.mkv --start 00:05:00 --end 25 --output clip.mkv --ffmpeg -an -
+#    $ clipmd5 source.mkv --start 00:05:00 --end 25 --output clip.mkv --ffmpeg -an
 
 
 import sys
@@ -147,7 +147,11 @@ def construct_command(in_file, start, out_file, end=None, ffmpeg=None):
         cmd.extend([out, end])
 
     # Append any FFmpeg parameters; put output path at the end
-    cmd.extend(ffmpeg + [out_file])
+    if ffmpeg:
+        cmd.extend(ffmpeg + [out_file])
+    else:
+        cmd.append(outfile)
+
     return cmd
 
 
